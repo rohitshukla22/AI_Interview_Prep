@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Page</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<style>
+    body {
+        background: linear-gradient(135deg, #3498db, #2ecc71);
+        font-family: 'Arial', sans-serif;
+        color: #161515; /* Set text color to white for better readability on the gradient background */
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 20px;
+        color: #0d0000; /* White */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text shadow for better visibility */
+    }
+    
+    #question-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+        backdrop-filter: blur(10px); /* Apply a blur effect */
+        box-shadow: 0 0 10px rgba(255, 242, 2, 0.8);
+        border-radius: 10px;
+        color: #333; /* Adjust text color as needed for better readability */
+    }
+    
+    
+    h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #333; /* Dark Gray */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow for better visibility */
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 10px;
+        color: #555; /* Medium Gray */
+    }
+    
+    input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 7px;
+        background-color: #106403; /* Dark Blue */
+        color: #f6faf7; /* White */
+        
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.); /* Text shadow for better visibility */
+    }
+    
+    button:hover {
+        background-color: #06bd1f; /* Darker Blue on Hover */
+    }
+    
+</style>
+<body>
+    <h1>Behavioural Interview</h1>
+    <div id="question-container">
+        <h1>Question: </h1><h3 id="question-text">{{ question }}</h3>
+        <form id="answer-form" method="post">
+            <label for="user_answer">Your Answer:</label>
+            <input type="text" id="user_answer" name="user_answer" required>
+            <button type="submit">Submit Answer</button>
+        </form>
+    </div>
+</body>
+</html>
